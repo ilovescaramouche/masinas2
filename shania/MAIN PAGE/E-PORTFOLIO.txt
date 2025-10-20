@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>E-PORTFOLIO</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(to right, #1ca2d8, #38b2de, #64bee3, #94cee8, #b5deed, #d3ebf2);
+      color: white;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+      height: 100vh;
+    }
+
+    .sparkle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .sparkle span {
+      position: absolute;
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      opacity: 0.9;
+      animation: sparkle-fall linear infinite;
+      filter: blur(1px);
+    }
+
+    @keyframes sparkle-fall {
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+    }
+
+    .floating-image {
+      position: absolute;
+      opacity: 0.25;
+      border-radius: 20px;
+      animation: float 30s infinite ease-in-out;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(3deg); }
+    }
+
+    header {
+      position: relative;
+      background-color: rgba(255, 255, 255, 0.25);
+      padding: 20px;
+      font-size: 30px;
+      font-weight: bold;
+      border-bottom: 4px solid white;
+      text-shadow: 2px 2px #00000033;
+      z-index: 2;
+      backdrop-filter: blur(6px);
+    }
+
+    .container {
+      margin-top: 30px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .main-character {
+      width: 125px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 13px;
+      border: 3px solid white;
+      box-shadow: 0 0 20px rgba(255,255,255,0.4);
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .menu a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .menu a:hover {
+      transform: scale(1.1);
+    }
+
+    .menu img {
+      width: 260px;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 25px;
+      border: 5px solid white;
+      box-shadow: 0 0 25px rgba(0,0,0,0.3);
+    }
+
+    .menu button {
+      margin-top: 10px;
+      background-color: rgba(0, 188, 212, 0.8);
+      border: none;
+      padding: 10px 25px;
+      border-radius: 10px;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease;
+      backdrop-filter: blur(4px);
+    }
+
+    .menu button:hover {
+      background-color: #0097a7;
+    }
+
+    .menu a, .menu button {
+      position: relative;
+      z-index: 5;
+      color: white;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sparkle" id="sparkleContainer"></div>
+
+<img src="IMAGES/GIF/Lotus Flower.jpg" class="floating-image" style="top: 65%; left: 5%; width: 240px;">
+<img src="IMAGES/GIF/Lotus Flower2.jpg" class="floating-image" style="top: 18%; left: 12%; width: 250px;">
+<img src="IMAGES/GIF/War Fans.jpg" class="floating-image" style="top: 25%; right: 8%; width: 260px;">
+<img src="IMAGES/GIF/Ice Buddha.jpg" class="floating-image" style="bottom: 12%; right: 16%; width: 240px;">
+
+<img src="IMAGES/GIF/Temple.jpg" 
+     style="
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       width: 450px;
+       opacity: 0.7;
+       transform: translate(-50%, -50%);
+       z-index: 1;
+     ">
+
+  <header>
+    💙 ELECTRONIC PORTFOLIO 💙
+  </header>
+
+  <div class="container">
+    <img src="IMAGES/GIF/Douma (Official Art).jpg" alt="Douma smiling confidently" class="main-character">
+  </div>
+
+  <div class="menu">
+    <a href="PERSONAL.html">
+      <img src="IMAGES/GIF/Douma.gif" alt="Douma smiling confidently">
+      <button>About Me 😋</button>
+    </a>
+
+    <a href="ICT.html">
+      <img src="IMAGES/GIF/HyunJu.gif" alt="Hyun Ju smiling">
+      <button>ICT</button>
+    </a>
+
+    <a href="AP.html">
+      <img src="IMAGES/GIF/Zayne.gif" alt="Zayne from Love and Deepspace">
+      <button>A.P</button>
+    </a>
+  </div>
+
+  <script>
+    const sparkleContainer = document.getElementById('sparkleContainer');
+    const sparkleCount = 60;
+    const colors = ['#b3f5ff', '#c8e8ff', '#f9d65c', '#fff5b3'];
+
+    for (let i = 0; i < sparkleCount; i++) {
+      const sparkle = document.createElement('span');
+      sparkle.style.left = Math.random() * 100 + '%';
+      sparkle.style.animationDuration = 3 + Math.random() * 4 + 's';
+      sparkle.style.animationDelay = Math.random() * 5 + 's';
+      sparkle.style.width = sparkle.style.height = 4 + Math.random() * 5 + 'px';
+      sparkle.style.background = colors[Math.floor(Math.random() * colors.length)];
+      sparkleContainer.appendChild(sparkle);
+    }
+  </script>
+
+</body>
+</html>

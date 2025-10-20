@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ICT</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #e8f9f3, #c7e8e2, #a5cfd1, #deeef2);
+      background-attachment: fixed;
+      color: #1e293b;
+      overflow-x: hidden;
+      animation: fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    header {
+      position: relative;
+      text-align: center;
+      padding: 80px 20px 60px;
+      background: rgba(255, 255, 255, 0.45);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+      border-bottom: 2px solid rgba(255,255,255,0.4);
+    }
+
+    header img {
+      width: 250px;
+      height: auto;
+      border-radius: 20px;
+      margin-bottom: 15px;
+      box-shadow: 0 0 25px rgba(255,255,255,0.6);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    header h1 {
+      font-size: 40px;
+      color: #2a5a54;
+      text-shadow: 0 0 10px rgba(255,255,255,0.7);
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: #334155;
+      font-size: 18px;
+    }
+
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      padding: 50px 10%;
+    }
+
+    .lesson-card {
+      background: rgba(255,255,255,0.8);
+      border-radius: 18px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+      width: 300px;
+      padding: 25px;
+      text-align: center;
+      transition: all 0.3s ease;
+      border-top: 5px solid #6fb7ad;
+      animation: fadeUp 1.2s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .lesson-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+    }
+
+    .lesson-card h2 {
+      color: #205c47;
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .lesson-card p {
+      color: #475569;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .lesson-card a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 22px;
+      background-color: #205c47;
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .lesson-card a:hover {
+      background-color: #2b7a63;
+      box-shadow: 0 0 10px rgba(43,122,99,0.6);
+    }
+
+    /* ===== EVENTS SECTION ===== */
+    section.events {
+      padding: 60px 10%;
+      background: rgba(255,255,255,0.5);
+      backdrop-filter: blur(6px);
+    }
+
+    .event {
+      margin-bottom: 80px;
+      background: rgba(255,255,255,0.8);
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      padding: 30px;
+      transition: 0.3s ease;
+    }
+
+    .event:hover {
+      transform: translateY(-5px);
+    }
+
+    .event h2 {
+      text-align: center;
+      color: #205c47;
+      margin-bottom: 25px;
+    }
+
+    .media {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .media img {
+      width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+    }
+
+    .media img:hover {
+      transform: scale(1.05);
+    }
+
+    .media video {
+      width: 630px;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+    }
+
+    .event p {
+      text-align: justify;
+      font-size: 16px;
+      color: #334155;
+      line-height: 1.8;
+      padding: 0 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #475569;
+      background: rgba(255,255,255,0.8);
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <img src="IMAGES/GIF/my wife.gif" alt="Hyun Ju">
+    <h1>✨ ICT Lessons and Events ✨</h1>
+  </header>
+
+  <main>
+    <div class="lesson-card">
+      <h2>Lesson 1: Introduction to CSS</h2>
+      <p>Learn what CSS is and how it shapes the design and presentation of web pages.</p>
+      <a href="ICT/lesson1.html">View Lesson</a>
+    </div>
+
+    <div class="lesson-card">
+      <h2>Lesson 2: CSS Structure and Types</h2>
+      <p>Understand how CSS rules are written and the three ways to apply them to webpages.</p>
+      <a href="ICT/lesson2.html">View Lesson</a>
+    </div>
+
+    <div class="lesson-card">
+      <h2>Lesson 3: Display Property, Div, and Span</h2>
+      <p>Explore block vs inline elements and how to use div and span for styling.</p>
+      <a href="ICT/lesson3.html">View Lesson</a>
+    </div>
+
+    <div class="lesson-card">
+      <h2>Lesson 4: CSS Classes</h2>
+      <p>Discover how class selectors make your styling more flexible and powerful.</p>
+      <a href="ICT/lesson4.html">View Lesson</a>
+    </div>
+
+    <div class="lesson-card">
+      <h2>Lesson 5: CSS Selectors</h2>
+      <p>Learn about different types of CSS selectors and how they target HTML elements.</p>
+      <a href="ICT/lesson5.html">View Lesson</a>
+    </div>
+
+    <div class="lesson-card">
+      <h2>Lesson 6: Dimensions and Pseudo-Classes</h2>
+      <p>Control element sizes and learn how to style links using pseudo-classes.</p>
+      <a href="ICT/lesson6.html">View Lesson</a>
+    </div>
+  </main>
+
+  <section class="events">
+    <div class="event">
+      <h2>Buwan ng Wika</h2>
+      <div class="media">
+        <img src="IMAGES/GIF/buwan1.jpg">
+        <img src="IMAGES/GIF/buwan2.jpg">
+      </div>
+      <div class="media">
+        <video controls src="VIDEOS/buwan.mp4"></video>
+      </div>
+      <p>During Buwan ng Wika, I learned that our language is not only the core of our Filipino identity but also our connection to our neighbors. This understanding inspires me to apply this lesson by being more curious about our own culture and its place within the wider region. I actively participated by joining the ASEAN Quiz Bee. Preparing for it and competing was a great experience that challenged me to learn more about our neighboring countries and how our cultures and languages are intertwined. If I were to explain this event, I'd say it's a celebration of what makes us Filipino, while also opening our eyes to our friends in ASEAN. This is why the event is crucial for the Filipino subject; it takes the lessons beyond our borders and shows how our language gives us a unique place in the world.</p>
+    </div>
+
+    <div class="event">
+      <h2>Intrams / Cluster Meet</h2>
+      <div class="media">
+        <img src="IMAGES/GIF/intrams1.jpg">
+        <img src="IMAGES/GIF/intrams2.jpg">
+      </div>
+      <div class="media">
+        <video controls src="VIDEOS/intrams.mp4"></video>
+      </div>
+      <p>The most important lesson I learned from the Intrams and Cluster Meet was the value of dedication and school spirit, which can be seen from every angle, not just on the playing field. I can apply this by appreciating the hard work that goes into any performance and by doing my own tasks with commitment. My active participation was unique; I served as a Campus Journalist and was assigned to cover the athletics events. This role gave me a front-row seat to observe the spirit of sportsmanship and the passion of all the participants, which was very inspiring. I'd explain Intrams as P.E. in action, showing that you don't have to be a player to be part of the event; supporting, cheering, and even documenting like I did are all important roles. It's vital for P.E. because it builds school community and shows that everyone has a part to play in promoting an active, healthy lifestyle.</p>
+    </div>
+
+    <div class="event">
+      <h2>Science Month</h2>
+      <div class="media">
+        <img src="IMAGES/GIF/science1.jpg">
+        <img src="IMAGES/GIF/science2.jpg">
+      </div>
+      <div class="media">
+        <video controls src="VIDEOS/science.mp4"></video>
+      </div>
+      <p>From Science Month, I learned that science is highly collaborative and creative, not just about individual experiments but about working as a team. I can apply this lesson by being a more supportive team member in group projects and appreciating how creativity is a big part of science. I actively participated by working with my entire class to set up our section's 'Wins Corner' display. Additionally, our class came together to help our two classmates who were competing in the Dish Garden event. Assisting them showed me a hands-on, creative side of biology. I'd describe Science Month as an "Innovation Fair" where we learn by doing and, just as importantly, by supporting each other's projects. This makes it vital for the Science subject because it teaches teamwork and shows us the practical, collective application of scientific concepts.</p>
+    </div>
+
+    <div class="event">
+      <h2>AP Month</h2>
+      <div class="media">
+        <img src="IMAGES/GIF/ap1.jpg">
+        <img src="IMAGES/GIF/ap2.jpg">
+      </div>
+      <div class="media">
+        <video controls src="VIDEOS/ap.mp4"></video>
+      </div>
+      <p>AP Month taught me that our history and national identity are built from many small, individual contributions that create a larger whole. I can apply this by understanding that my own small actions, when combined with others, can contribute to our community and country. My active participation was exactly this: I contributed a flaglet for our section's display. While it seemed like a small task, seeing it join all the others made me feel part of a collective expression of our school pride and identity. I'd explain AP Month as a way to make our country's story visual and personal. This is why the event is essential for AP; it fosters nationalism and helps us see that our shared history is something we all build together, one small piece at a time.</p>
+    </div>
+
+    <div class="event">
+      <h2>Teacher’s Day</h2>
+      <div class="media">
+        <img src="IMAGES/GIF/teacher1.jpg">
+        <img src="IMAGES/GIF/teacher2.jpg">
+      </div>
+      <div class="media">
+        <video controls src="VIDEOS/teacher.mp4"></video>
+      </div>
+      <p>The most important thing I learned from our Teacher's Day celebration was a deep appreciation for our teachers and the joy that comes from a well-planned, heartfelt "thank you." I can apply this lesson by making a conscious effort to show gratitude to those who guide me, not just with words, but with thoughtful actions. I actively participated by collaborating with my classmates to plan and execute a surprise for our class adviser. It involved teamwork, secrecy, and a shared goal of making our adviser feel special and valued. I'd explain this event as a "Thank You Party" that we students organize to give back to our teachers for all their hard work. This is so important because it strengthens the student-teacher bond and is a real-life practice of Values (EsP), allowing us to put gratitude and respect into action.</p>
+    </div>
+  </section>
+  
+ <div class="credits">
+    <h3>📸 Media Credits</h3>
+    <p>
+      <strong>Buwan ng Wika:</strong> Ang Paham<br>
+      <strong>Intrams / Cluster Meet Media:</strong> Jade Isabelle S. Imperial (9-Family)<br>
+      <strong>Science Month:</strong> Jade Isabelle S. Imperial (9-Family)<br>
+      <strong>AP Month:</strong> Allison Ciera Pineda (9-Family)<br>
+      <strong>Teacher’s Day:</strong> Ang Paham, Jade Isabelle S. Imperial (9-Family)<br>
+    </p>
+  </div>
+
+</body>
+</html>

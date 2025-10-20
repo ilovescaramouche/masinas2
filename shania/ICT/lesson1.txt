@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lesson 1: Introduction to CSS</title>
+  <style>
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(135deg, #cde6df, #edf6f3);
+      color: #1a1a1a;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+    }
+
+    header h1 {
+      font-size: 28px;
+      color: #1e3a34;
+      margin: 0;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #2a5951;
+      border-bottom: 2px solid #cde6df;
+      padding-bottom: 5px;
+    }
+
+    p {
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    nav a {
+      display: inline-block;
+      background: #2a5951;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: #1f403a;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="IMAGES/GIF/qiuyuan.gif" alt="Qiuyuan">
+    <h1>Lesson 1: Introduction to CSS</h1>
+  </header>
+
+  <main>
+    <h2>Overview</h2>
+    <p>This lesson was a high-level introduction to Cascading Style Sheets (CSS). I learned that CSS is the language used to style and design webpages, controlling things like layout, colors, and fonts. It explained the "three layers" of a webpage:</p>
+
+    <ul>
+      <li><strong>Content Layer (HTML):</strong> Provides the basic structure.</li>
+      <li><strong>Presentation Layer (CSS):</strong> Adds all the visual styling.</li>
+      <li><strong>Behavior Layer (JavaScript):</strong> Handles user interaction and functionality.</li>
+    </ul>
+
+    <p>The main benefit of CSS is that it separates content (HTML) from design (CSS), which makes websites much easier to maintain and update.</p>
+
+    <nav>
+      <a href="ICT/lesson2.html">Next Lesson →</a>
+    </nav>
+  </main>
+
+</body>
+</html>

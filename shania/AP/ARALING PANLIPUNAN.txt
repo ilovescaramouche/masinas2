@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Yunit II: Microeconomics — AP 9 Reviewer (Full)</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    :root{
+      --panel-bg: rgba(255,255,255,0.96);
+      --accent: #3048b3;
+      --muted: #475569;
+      --mono: "Courier New", monospace;
+    }
+
+    body{
+      margin:0;
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(135deg,#0d1b3d,#1a2a57,#2e3b83,#493a9b,#5e48b6);
+      color:#f1f5f9;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      overflow-x:hidden;
+    }
+
+    /* aurora & stars (kept from your theme) */
+    .aurora{position:fixed;top:0;left:0;width:120%;height:120%;
+      background:
+        radial-gradient(circle at 30% 40%, rgba(120,170,255,0.25), transparent 70%),
+        radial-gradient(circle at 70% 60%, rgba(190,160,255,0.3), transparent 70%),
+        radial-gradient(circle at 50% 80%, rgba(120,180,255,0.2), transparent 70%);
+      mix-blend-mode:screen;filter:blur(90px);z-index:0;pointer-events:none;
+      animation: auroraMove 25s ease-in-out infinite alternate;
+    }
+    @keyframes auroraMove{0%{transform:translate(-10%,-10%) rotate(0);}100%{transform:translate(10%,10%) rotate(15deg);}}
+
+    .stars{position:fixed;top:0;left:0;width:100%;height:100%;overflow:hidden;z-index:1;pointer-events:none;}
+    .star{position:absolute;border-radius:50%;opacity:0;animation:twinkle 6s infinite ease-in-out, drift 20s infinite linear;}
+    @keyframes twinkle{0%,100%{opacity:0.2;transform:scale(0.7);}50%{opacity:1;transform:scale(1.2);}}
+    @keyframes drift{0%{transform:translate(0,0);}50%{transform:translate(20px,-15px);}100%{transform:translate(0,0);}}
+
+    header{
+      position:relative;
+      background:url('Zayne (Myth).gif') center/cover no-repeat;
+      text-align:center;
+      padding:66px 20px;
+      color:white;
+      z-index:2;
+      overflow:hidden;
+    }
+    header::before{content:"";position:absolute;inset:0;background:rgba(10,15,40,0.55);z-index:0;}
+    header h1, header p{position:relative;z-index:2;text-shadow:0 0 15px rgba(130,180,255,0.9),0 0 30px rgba(180,150,255,0.6);}
+    header h1{font-size:36px;margin:0 0 6px;}
+    header p{font-size:16px;margin:0;color:#c7d2fe;}
+
+    main{position:relative;z-index:2;padding:28px 0 80px;}
+
+    section{
+      width:85%;
+      margin:20px auto;
+      padding:22px;
+      background:var(--panel-bg);
+      color:#1e293b;
+      border-radius:12px;
+      box-shadow:0 6px 20px rgba(0,0,0,0.25);
+    }
+
+    h2{color:var(--accent);border-bottom:3px solid var(--accent);padding-bottom:6px;margin:0 0 12px;font-size:20px;}
+    p{line-height:1.7;margin:8px 0;color:#263040;}
+    ul, ol{margin:8px 0 12px 20px;color:#263040;line-height:1.7;}
+    strong{color:#0b2547;}
+    em{font-style:italic;color:#334155;}
+
+    .formula{background:#eef2ff;padding:10px;border-radius:8px;font-family:var(--mono);color:#1e293b;margin:12px 0;}
+    table{border-collapse:collapse;width:100%;margin-top:12px;}
+    th,td{border:1px solid #cbd5e1;padding:8px;text-align:left;}
+    th{background:#dbeafe;color:#123057;}
+
+    .image-box{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:14px;}
+    .image-box div{flex:1 1 40%;max-width:420px;text-align:center;}
+    .image-box img{width:100%;height:250px;object-fit:cover;border-radius:10px;border:2px solid #c7d2fe;box-shadow:0 6px 20px rgba(0,0,0,0.15);transition:transform .25s,box-shadow .25s;}
+    .image-box img:hover{transform:scale(1.04);box-shadow:0 10px 30px rgba(60,100,255,0.25);}
+    .caption{font-size:13px;color:var(--muted);margin-top:8px;}
+
+    footer{width:90%;margin:30px auto 60px;color:#cbd5e1;text-align:center;}
+
+    @media (max-width:768px){
+      section{width:94%;padding:16px;}
+      .image-box div{flex:1 1 100%;}
+      .image-box img{height:220px;}
+    }
+  </style>
+</head>
+<body>
+  <div class="aurora"></div>
+  <div class="stars" id="stars"></div>
+
+  <header>
+    <h1>YUNIT II: MICROECONOMICS</h1>
+    <p>Demand, Supply, Elasticity, Equilibrium, Market Structures, and Government Regulation</p>
+  </header>
+
+  <main>
+
+    <section id="demand">
+      <h2>Aralin 1 — Demand</h2>
+
+      <p><strong>DEMAND</strong><br>
+      - Tumutukoy sa dami ng produkto o serbisyo na gusto at kayang bilhin ng mga mamimili sa isang takdang presyo at partikular na panahon. Ang kakayahan at kagustuhan ng tao na makamit at bilhin ang isang produkto o serbisyo ang nagtatakda ng kaniyang pangangailangan at kagustuhan.</p>
+
+      <p><strong>BATAS NG DEMAND</strong><br>
+      - Kapag tumataas ang presyo, bumababa ang dami ng gusto at kayang bilhin at kapag bumaba ang presyo, tataas naman ang dami ng gusto at kayang bilhin. (<em>Ceteris paribus</em> — iba pang salik ay pinapanatiling constant).</p>
+
+      <p><strong>DALAWANG KONSEPTONG NAGPAPALIWANAG SA INVERSE NA UGNAYAN</strong></p>
+      <ol>
+        <li><strong>Substitution Effect</strong> — kapag tumaas ang presyo ng isang produkto, hahanap ang mamimili ng pamalit na mas mura; nababawasan ang demand para sa mas mahal na produkto.</li>
+        <li><strong>Income Effect</strong> — kapag bumaba ang presyo, tumataas ang purchasing power ng kita kaya nakabili ng mas marami; kapag tumaas ang presyo, bumababa ang purchasing power at nababawasan ang dami na mabibili.</li>
+      </ol>
+
+      <p class="formula"><strong>MATHEMATICAL FORMULA:</strong><br>
+      DEMAND = KAGUSTUHAN + KAKAYAHAN</p>
+
+      <p><strong>DEMAND FUNCTION</strong><br>
+      - Isang matematikong pagpapakita ng relasyon ng presyo at quantity demanded: <br>
+      <span class="formula">Q<sub>d</sub> = a − bP</span>
+      <br>kung saan: Qd = quantity demanded; a = intercept (dami kung presyo = 0); b = slope; P = presyo.</p>
+
+      <p><strong>DEMAND SCHEDULE</strong><br>
+      - Isang tsart/tabla na nagpapakita ng dami ng hinihiling sa iba’t ibang presyo.</p>
+
+      <p><strong>DEMAND CURVE</strong><br>
+      - Grapikong representasyon ng batas ng demand; nagpapakita ng negatibong relasyon ng presyo at dami.</p>
+
+      <p><strong>MGA SALIK NA NAKAAAPEKTO SA DEMAND</strong></p>
+      <ul>
+        <li><strong>Kita</strong> — mas mataas ang kita, mas mataas ang kakayahan bumili.</li>
+        <li><strong>Panlasa</strong> — pagbabago sa preference ng mga mamimili.</li>
+        <li><strong>Dami ng Mamimili</strong> — bandwagon effect, trend o fad.</li>
+        <li><strong>Presyo ng Kaugnay na Produkto</strong> — complements at substitutes.</li>
+        <li><strong>Inaasahan sa Presyo</strong> — kung inaasahan tumaas sa hinaharap, tataas ang demand ngayon (hoarding).</li>
+        <li><strong>Okasyon</strong> — festivals, selebrasyon.</li>
+        <li><strong>Klima o Panahon</strong></li>
+        <li><strong>Kalamidad</strong></li>
+        <li><strong>Dali ng Pagkabulok</strong> — perishability.</li>
+        <li><strong>Subsidy</strong> — kung may tulong pinansyal sa mamimili o producer.</li>
+      </ul>
+
+      <div class="image-box">
+        <div>
+          <img src="IMAGES/GIF/demand-graph1.jpg" alt="Demand Curve">
+          <p class="caption">Halimbawa ng Demand Curve</p>
+        </div>
+        <div>
+          <img src="IMAGES/GIF/demand-graph2.jpg" alt="Demand Factors">
+          <p class="caption">Mga Salik na Nakaaapekto sa Demand</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="supply">
+      <h2>Aralin 2 — Supply</h2>
+
+      <p><strong>SUPPLY</strong><br>
+      - Tumutukoy sa dami ng produkto o serbisyo na gustong ibenta ng mga prodyuser sa isang takdang presyo at partikular na panahon.</p>
+
+      <p><em>EN: Supply is the quantity of goods or services producers are willing to sell at given prices and time.</em></p>
+
+      <p><strong>BATAS NG SUPPLY</strong><br>
+      - Kapag tumataas ang presyo, tataas ang dami ng gusto at kayang ibenta; kapag bumaba ang presyo, bababa rin ang dami (ceteris paribus).</p>
+
+      <p><strong>SUPPLY SCHEDULE</strong><br>
+      - Talahanayan na nagpapakita ng dami ng gusto at kayang ibenta sa iba't ibang presyo.</p>
+
+      <p><strong>SUPPLY FUNCTION</strong><br>
+      - Matematikal na relasyon ng dami ng supply at presyo. Halimbawa: <span class="formula">Qs = -a + bP</span><br>
+      ➔ Qs = dami ng suplay; a = supply kapag presyo = 0; b = slope; P = presyo.</p>
+
+      <p><strong>MGA SALIK NA NAKAAAPEKTO SA SUPLAY</strong></p>
+      <ol>
+        <li><strong>Pagbabago sa Teknolohiya</strong> — nagpapataas ng productivity at supply.</li>
+        <li><strong>Pagbabago sa Halaga ng Salik ng Produksyon</strong> — pagtaas ng gastos → maaaring bumaba ang supply.</li>
+        <li><strong>Pagbabago sa Bilang ng Nagtitinda</strong> — kung maraming nagtitinda, dumadami ang supply.</li>
+        <li><strong>Pagbabago sa Presyo ng Kaugnay na Produkto</strong> — complementary at substitute production effects.</li>
+        <li><strong>Ekspektasyon sa Presyo</strong> — kung inaasahang tumaas, maaaring maghoard ang prodyuser ngayon.</li>
+        <li><strong>Okasyon</strong></li>
+        <li><strong>Panahon/Klima</strong></li>
+        <li><strong>Kalamidad</strong></li>
+        <li><strong>Dali ng Pagkabulok</strong></li>
+        <li><strong>Subsidy o Tulong ng Pamahalaan</strong></li>
+      </ol>
+
+      <p><strong>PRICE ELASTICITY NG SUPPLY</strong><br>
+      - Para masukat kung gaano tumutugon ang quantity supplied sa pagbabago ng presyo.</p>
+
+      <div class="image-box">
+        <div>
+          <img src="IMAGES/GIF/supply-graph1.jpg" alt="Supply Curve">
+          <p class="caption">Halimbawa ng Supply Curve</p>
+        </div>
+        <div>
+          <img src="IMAGES/GIF/supply-factors.jpg" alt="Supply Factors">
+          <p class="caption">Mga Salik na Nakaaapekto sa Supply</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="elasticity">
+      <h2>Aralin 3 — Price Elasticity</h2>
+
+      <p><strong>PRICE ELASTICITY OF DEMAND</strong><br>
+      - Ito ang paraan na ginagamit upang masukat ang pagtugon (responsiveness) ng quantity demanded sa pagbabago ng presyo.</p>
+
+      <p><em>EN: Price elasticity of demand measures how much quantity demanded responds to a change in price.</em></p>
+
+      <p class="formula"><strong>FORMULA:</strong><br>
+      Elasticity (E) = (% pagbabago sa Qd) ÷ (% pagbabago sa P)</p>
+
+      <p><strong>MGA URI NG ELASTISIDAD (Coefficient)</strong></p>
+      <table>
+        <tr><th>Coefficient</th><th>Kahulugan</th><th>Uri</th></tr>
+        <tr><td>&gt; 1</td><td>Mas malaki ang bahagdan ng pagtugon ng Qd kaysa sa bahagdan ng pagbabago sa presyo</td><td>Elastic</td></tr>
+        <tr><td>&lt; 1</td><td>Mas maliit ang bahagdan ng pagbabago ng Qd kaysa sa bahagdan ng pagbabago sa presyo</td><td>Inelastic</td></tr>
+        <tr><td>= 1</td><td>Pareho ang bahagdan (proportionate response)</td><td>Unitary Elastic</td></tr>
+        <tr><td>∞</td><td>Anumang pagbabago sa presyo → infinite na pagbabago sa Qd</td><td>Perfectly Elastic</td></tr>
+        <tr><td>0</td><td>Quantity demanded ay hindi tumutugon sa pagbabago ng presyo</td><td>Perfectly Inelastic</td></tr>
+      </table>
+
+      <p><strong>NOTES:</strong></p>
+      <ul>
+        <li>Mga salik na nakakaapekto sa elasticity: availability ng substitutes, proportion of income spent on good, necessity vs luxury, time horizon.</li>
+        <li>Mayroon ding <strong>price elasticity of supply</strong> na sumusukat sa responsiveness ng quantity supplied kapag nagbago ang presyo.</li>
+      </ul>
+
+      <div class="image-box">
+        <div>
+          <img src="IMAGES/GIF/elasticity-graph.jpg" alt="Elasticity Graph">
+          <p class="caption">Paggalaw ng Elastic at Inelastic Demand</p>
+        </div>
+        <div>
+          <img src="IMAGES/GIF/elasticity-examples.jpg" alt="Elasticity Examples">
+          <p class="caption">Mga Halimbawa ng Elastic at Inelastic Goods</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="equilibrium">
+      <h2>Aralin 4 — Market Equilibrium (Ekwilibriyo sa Pamilihan)</h2>
+
+      <p><strong>EKWILIBRIYO</strong><br>
+      - Isang kalagayan sa pamilihan kung saan ang dami ng handa at kayang bilhin ng mga konsyumer (Qd) at dami ng handa at kayang ipagbili ng prodyuser (Qs) ay pareho ayon sa presyong pinagkasunduan.</p>
+
+      <p><em>EN: Equilibrium is the market state where quantity demanded equals quantity supplied at the agreed price.</em></p>
+
+      <p><strong>EKWILIBRIYONG PRESYO</strong><br>
+      - Pinagkasunduang presyo ng mamimili at prodyuser.</p>
+
+      <p><strong>EKWILIBRIYO DAMI</strong><br>
+      - Napagkasunduang dami ng produkto o serbisyo.</p>
+
+      <p><strong>DISEKWILIBRIYO</strong><br>
+      - Anumang sitwasyon kung saan hindi magkatugma ang Qd at Qs sa isang takdang presyo.</p>
+
+      <p><strong>SHORTAGE</strong><br>
+      - Kapag mas mataas ang demand kaysa supply sa kasalukuyang presyo (Qd &gt; Qs).</p>
+
+      <p><strong>SURPLUS</strong><br>
+      - Kapag mas mataas ang supply kaysa demand sa kasalukuyang presyo (Qs &gt; Qd).</p>
+
+      <div class="image-box">
+        <div>
+          <img src="IMAGES/GIF/equilibrium-graph.jpg" alt="Equilibrium Graph">
+          <p class="caption">Pagtatagpo ng Demand at Supply</p>
+        </div>
+        <div>
+          <img src="IMAGES/GIF/shortage-surplus.jpg" alt="Shortage and Surplus">
+          <p class="caption">Halimbawa ng Shortage at Surplus</p>
+        </div>
+      </div>
+
+      <p><strong>EXAMPLE (tabular):</strong></p>
+      <table>
+        <tr><th>Presyo (₱)</th><th>Qd</th><th>Qs</th></tr>
+        <tr><td>5</td><td>75</td><td>25</td></tr>
+        <tr><td>10</td><td>50</td><td>50</td></tr>
+        <tr><td>15</td><td>25</td><td>75</td></tr>
+      </table>
+
+      <p><em>EN: In this example, ₱10 is the equilibrium price where Qd = Qs = 50.</em></p>
+    </section>
+
+    <section id="market-structures">
+      <h2>Aralin 5 — Iba’t Ibang Estruktura ng Pamilihan</h2>
+
+      <p><strong>PAMILIHAN AT MGA ISTRUKTURA</strong><br>
+      - Ang pamilihan ay lugar o mekanismo kung saan natutugunan ang pangangailangan at kagustuhan ng mamimili sa pamamagitan ng kalakal at serbisyo. May tatlong pangunahing elemento: mamimili, prodyuser, at produkto.</p>
+
+      <p><strong>PAGKAKAIBA NG MGA URI NG PAMILIHAN</strong></p>
+      <ul>
+        <li>Bilang at laki ng prodyuser o konsyumer</li>
+        <li>Uri ng produkto o serbisyo</li>
+        <li>Kontrol sa pagpasok sa pamilihan</li>
+        <li>Kontrol sa presyo</li>
+        <li>Paggamit ng non-price competition (advertising, quality, service)</li>
+      </ul>
+
+      <p><strong>URI NG PAMILIHAN (range):</strong> Lokal, Panrehiyon, Pambansa, Pandaigdigan</p>
+
+      <h3 style="color:var(--accent);margin-top:12px;">Estruktura ng Pamilihan — Mga Uri</h3>
+
+      <p><strong>Ganap na Kompetisyon (Perfect Competition)</strong></p>
+      <ol>
+        <li>Maraming mamimili at prodyuser.</li>
+        <li>Homogenous (pare-parehong) produkto.</li>
+        <li>Firms are price takers (walang kontrol sa presyo).</li>
+        <li>Madalang hadlang sa pagpasok o pag-alis sa industriya.</li>
+      </ol>
+
+      <p><strong>Monopolyo (Monopoly)</strong></p>
+      <ul>
+        <li>Iisang prodyuser lamang sa industriya.</li>
+        <li>Walang kalapit na pamalit (close substitutes) para sa produkto.</li>
+        <li>Ang monopolist ay price maker (may kontrol sa presyo).</li>
+        <li>Napakahirap pumasok sa industriya (high entry barriers).</li>
+      </ul>
+
+      <p><strong>Oligopolyo (Oligopoly)</strong></p>
+      <ul>
+        <li>Kakaunti lamang ang malalaking prodyuser.</li>
+        <li>Produkto maaaring magkakatulad o magkakaiba.</li>
+        <li>Malaki ang kontrol sa presyo (interdependence between firms).</li>
+        <li>Mahigpit ang advertising at R&D spending.</li>
+      </ul>
+
+      <p><strong>Monopolistic Competition</strong></p>
+      <ul>
+        <li>May katamtamang dami ng prodyuser at konsyumer.</li>
+        <li>May product differentiation — iba't ibang tatak o brand.</li>
+        <li>May kaunting kontrol sa presyo dahil sa product differentiation.</li>
+        <li>Mas madali ang entry kumpara sa monopoly o oligopoly.</li>
+      </ul>
+
+      <p><strong>Monopsony</strong></p>
+      <ul>
+        <li>Isang malaking mamimili/consumers ngunit maraming producers.</li>
+        <li>May kapangyarihan ang mamimili na impluwensiyahan ang presyo.</li>
+      </ul>
+
+      <div class="image-box">
+        <div>
+          <img src="IMAGES/GIF/E-PORTFOLIO.htmlmarket-structures.jpg" alt="Market Structures">
+          <p class="caption">Iba’t Ibang Estruktura ng Pamilihan</p>
+        </div>
+        <div>
+          <img src="IMAGES/GIF/competition-types.jpg" alt="Competition Types">
+          <p class="caption">Mga Halimbawa ng Kompetisyon</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="government-role">
+      <h2>Aralin 6 — Bahaging Ginagampanan ng Pamahalaan sa Regulasyon ng mga Gawaing Pang-ekonomiya</h2>
+
+      <p>Ang pamahalaan ay may mahalagang papel sa ekonomiya — mula sa pagsisiguro ng patas na kompetisyon, pagprotekta sa mamimili, pagtatakda ng presyo, hanggang sa pagbibigay serbisyo publiko.</p>
+
+      <h3 style="color:var(--accent);margin-top:12px;">Price Control (Pagkontrol sa Presyo)</h3>
+      <p>Ang pamahalaan ay maaaring magtakda ng pinakamataas (price ceiling) at pinakamababang presyo (price floor) upang protektahan ang mamimili at prodyuser.</p>
+
+      <p><strong>REPUBLIC ACT 7581 (Price Control Act)</strong><br>
+      - Layunin ng batas na payagan ang pamahalaan na magpatupad ng price control kapag kinakailangan upang protektahan ang mamimili at panatilihin ang suplay.</p>
+
+      <p><strong>NATIONAL PRICE COORDINATION COUNCIL</strong><br>
+      - Nagbabantay at tumutulong sa pagpapatupad ng price ceilings kapag ipinataw ng pamahalaan.</p>
+
+      <p><strong>PRICE CEILING</strong><br>
+      - Pinakamataas na presyong itinakda ng pamahalaan upang ipagbili ang produkto; karaniwang inilalagay sa ibaba ng equilibrium price upang protektahan ang mamimili.</p>
+
+      <p><strong>PRICE SUPPORT / SUBSIDY</strong><br>
+      - Mga programang pinansyal para tulungan ang mga prodyuser (maaaring itaas ang kita o bawasan ang gastos upang mapanatili ang suplay).</p>
+
+      <p><strong>FLOOR PRICE (PRICE FLOOR)</strong><br>
+      - Pinakamababang presyong legal na puwedeng ipagbenta; kadalasang itinatakda sa itaas ng equilibrium price para protektahan ang prodyuser (hal. minimum wage halimbawa ng isang uri ng price floor).</p>
+
+      <p><strong>IBA PANG GAMIT NG PAMAHALAAN</strong></p>
+      <ul>
+        <li><strong>Taxation</strong> — pagkolekta ng buwis para suportahan ang serbisyong pampubliko at kontrol sa demand.</li>
+        <li><strong>Subsidies</strong> — tulong sa prodyuser upang palakasin ang suplay o mapababa ang presyo.</li>
+        <li><strong>Regulation</strong> — pagtatakda ng pamantayan para sa produkto at serbisyo, health & safety standards.</li>
+        <li><strong>Public goods</strong> — pagbibigay ng serbisyong pampubliko (road, health center, education) na hindi lubos nabibigay ng pribadong sektor.</li>
+      </ul>
+
+      <div class="image-box">
+        <div>
+          <img src="IMAGES/GIF/government-role.jpg" alt="Government Regulation">
+          <p class="caption">Regulasyon ng Pamahalaan</p>
+        </div>
+        <div>
+          <img src="IMAGES/GIF/public-services.jpg" alt="Public Services">
+          <p class="caption">Serbisyong Pampubliko bilang Bahagi ng Ekonomiya</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // stars generator (kept)
+    const starsContainer = document.getElementById('stars');
+    const numStars = 90;
+    for (let i = 0; i < numStars; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      const size = (Math.random() * 3 + 1) + 'px';
+      star.style.width = size;
+      star.style.height = size;
+      star.style.top = Math.random() * 100 + '%';
+      star.style.left = Math.random() * 100 + '%';
+      star.style.animationDelay = Math.random() * 6 + 's';
+      star.style.background = ['#b0d9ff','#e6d9ff','#a6c8ff','#c5a8ff'][Math.floor(Math.random()*4)];
+      starsContainer.appendChild(star);
+    }
+  </script>
+</body>
+</html>

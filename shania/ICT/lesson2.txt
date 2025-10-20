@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lesson 2: CSS Structure and Types</title>
+  <style>
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(135deg, #cde6df, #edf6f3);
+      color: #1a1a1a;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+    }
+
+    header h1 {
+      font-size: 28px;
+      color: #1e3a34;
+      margin: 0;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #2a5951;
+      border-bottom: 2px solid #cde6df;
+      padding-bottom: 5px;
+    }
+
+    p {
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    nav a {
+      display: inline-block;
+      background: #2a5951;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: #1f403a;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="IMAGES/GIF/qiuyuan.gif" alt="Qiuyuan">
+    <h1>Lesson 2: CSS Structure and Types</h1>
+  </header>
+
+  <main>
+    <p>This lesson broke down the fundamental "how-to" of CSS. I learned the basic syntax of a CSS rule, which consists of a selector (the HTML element you want to style) and a declaration block. This block contains properties (like color) and values (like blue) separated by a colon.</p>
+
+    <p>The lesson's main focus was on the three ways to add CSS to a webpage:</p>
+
+    <ul>
+      <li><strong>Inline CSS:</strong> The style is placed directly inside an HTML tag using the style attribute. This is used for small, isolated changes.</li>
+      <li><strong>Embedded (Internal) CSS:</strong> The styles are placed inside a &lt;style&gt; tag within the &lt;head&gt; section of the HTML file. This affects the entire page.</li>
+      <li><strong>External (Linked) CSS:</strong> The styles are saved in a separate .css file. This file is then linked to any HTML page using a &lt;link&gt; tag in the &lt;head&gt;, making it the most efficient way to style an entire website.</li>
+    </ul>
+
+    <nav>
+      <a href="ICT/lesson1.html">← Previous</a>
+      <a href="ICT/lesson3.html">Next Lesson →</a>
+    </nav>
+  </main>
+
+</body>
+</html>
